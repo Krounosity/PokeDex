@@ -44,18 +44,6 @@ const Main = () => {
           />
 
           <div className="btn-group">
-            {prevUrl && (
-              <button
-                onClick={() => {
-                  setPokeData([]);
-                  setUrl(prevUrl);
-                }}
-              >
-                Previous
-              </button>
-            )}
-          </div>
-          <div className="btn1-group">
             {nextUrl && (
               <button
                 onClick={() => {
@@ -64,6 +52,18 @@ const Main = () => {
                 }}
               >
                 Next
+              </button>
+            )}
+          </div>
+          <div className="btn1-group">
+            {prevUrl && (
+              <button
+                onClick={() => {
+                  setPokeData([]);
+                  setUrl(prevUrl);
+                }}
+              >
+                Previous
               </button>
             )}
           </div>
