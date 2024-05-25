@@ -13,24 +13,30 @@ body {
   padding-top: 150px;
   display: flex;
   /* border: 2px solid green; */
-  
 }
 .left-content,
 .right-content {
   flex-basis: 50%;
+  max-width: 120rem;
+  min-width: 10rem;
 }
 .left-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   /* border: 2px solid yellow; */
- 
 }
 .card {
   width: 245px;
   height: 130px;
 
-  background: linear-gradient(to bottom right , #2f3a31,#e3ffe0 ,#d0ffcb , #678767) ;
+  background: linear-gradient(
+    to bottom right,
+    #2f3a31,
+    #e3ffe0,
+    #d0ffcb,
+    #678767
+  );
   border-radius: 1rem;
   box-shadow: 0 5px 5px rgba(255, 255, 255, 0.5);
   padding: 1 1.5rem;
@@ -38,7 +44,6 @@ body {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-
 }
 .num {
   position: relative;
@@ -46,7 +51,7 @@ body {
   left: 15px;
   font-size: 15px;
 }
- .charimg {
+.charimg {
   font-size: x-large;
 }
 .pokimg {
@@ -54,12 +59,11 @@ body {
   /* right: 170px; */
   width: 260px;
 
-  background-color:  rgba(30, 30, 30, 1);
-  background-image: url('../Head.png');
-background-size:cover;
-background-position: center;
+  background-color: rgba(30, 30, 30, 1);
+  background-image: url("../Head.png");
+  background-size: cover;
+  background-position: center;
   border-radius: 29px;
-
 }
 
 .char {
@@ -68,7 +72,6 @@ background-position: center;
   right: 10px;
 }
 .right-content {
-
   width: 45%;
   height: 90%;
   color: rgb(255, 255, 255);
@@ -107,50 +110,36 @@ background-position: center;
 .base-stat {
   margin-top: 2rem;
 }
-.btn1-group {
-}
-.btn1-group button {
-  outline: none;
-  border: none;
-  width: 150px;
-  padding: 0.3rem 0;
-  margin: 1rem;
-  font-size: 17px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  background-color: #b74555;
-  border-radius: 8px;
-}
 
 .btn-group {
+  display: grid;
   position: relative;
-  top: 170px;
-  right: 190px;
+  grid-template-columns: 1fr 1fr;
+  height: 1.5rem;
+  left: -48%;
+  top: -60px;
 }
 .btn-group button {
   outline: none;
   border: none;
-  width: 150px;
+  width: 10rem;
   padding: 0.3rem 0;
-  margin: 1rem;
   font-size: 17px;
   font-weight: bold;
   color: white;
   background-color: #b74555;
   border-radius: 8px;
+  margin: 5px;
 }
 
-
 /* **************************** */
-.Info{
+.Info {
   display: flex;
   justify-content: space-between;
   justify-content: center;
-  
-  
 }
 
-.right-content .group-Info{
+.right-content .group-Info {
   /* border: 2px solid red; */
   width: 45%;
   height: 39%;
@@ -158,197 +147,190 @@ background-position: center;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
+
   box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  background-color:  rgba(30, 30, 30, 1);
+  background-color: rgba(30, 30, 30, 1);
   margin-left: 50px;
 }
 
-.group-Info .sub-sub-G{
-/* border: 2px solid pink; */
-margin: 17px;
-margin-bottom: 20px;
-margin-left: 50px;
-margin-right: 50px;
-display: flex;
+.group-Info .sub-sub-G {
+  /* border: 2px solid pink; */
+  margin: 17px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
 
-/* border: 2px solid green; */
-align-items: center;
-justify-content: space-between;
+  /* border: 2px solid green; */
+  align-items: center;
+  justify-content: space-between;
 }
 
-.sub-G{
+.sub-G {
   margin: 10px;
- 
 }
 .sub-G .infoValue {
   font-size: 1.3rem;
 }
 
 .sub-G {
-
 }
-.sub-G h3{
+.sub-G h3 {
   font-weight: bold;
   padding-bottom: 6px;
   font-size: 1rem;
   letter-spacing: 0.15rem;
-  
 }
-.sub-G .head{
+.sub-G .head {
   justify-content: center;
   align-items: center;
   text-align: center;
   /* border: 2px solid white; */
- 
+
   font-size: 25px;
   font-weight: bolder;
   padding: 0;
   margin: 0;
 }
-.Pbar{
+.Pbar {
   /* border: 2px solid green; */
   margin: 12px;
   margin-bottom: 5px;
 }
-.heading{
+.heading {
   text-align: center;
- letter-spacing: 0.1rem;
- padding: 0.6rem;
+  letter-spacing: 0.1rem;
+  padding: 0.6rem;
 
- font-weight: bold;
- font-size: 1.3rem;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
-.stats-item{
-display: flex;  
-/* border: 2px solid yellow; */
-margin: 0.3rem;
+.stats-item {
+  display: flex;
+  /* border: 2px solid yellow; */
+  margin: 0.3rem;
 }
-.stats-info{
+.stats-info {
   display: flex;
   display: -webkit-box;
-  display: -ms-flexbox; 
+  display: -ms-flexbox;
   display: -webkit-box;
-  display: -ms-flexbox; 
-
+  display: -ms-flexbox;
 }
 .stats-info p {
-
-/* border: 2px solid yellow; */
+  /* border: 2px solid yellow; */
 }
-.stats-info .value{
+.stats-info .value {
   font-size: 1.2rem;
   font-weight: 600;
   /* margin-left6 45px; */
 }
-.stats-info .itemdata{
-
+.stats-info .itemdata {
   width: 150px;
-  margin-right: 5rem ;
+  margin-right: 5rem;
   margin-left: 2rem;
 }
-.stats-info .data{
-
+.stats-info .data {
   font-size: 1.4rem;
   font-weight: bolder;
- 
 }
 
-.progress-line{
+.progress-line {
   margin-top: 8px;
-    height: 6px;
-    width: 55%;
-    
-    background-color: #cdcdcd;
-    border-radius: 50px;
-    position: relative;
-    /* right: 5px; */
+  height: 6px;
+  width: 55%;
+
+  background-color: #cdcdcd;
+  border-radius: 50px;
+  position: relative;
+  /* right: 5px; */
   left: 30px;
-
-
 }
 
-.progress-line span{
+.progress-line span {
   -webkit-transform: scale();
   transform: scale();
-  -webkit-animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
-  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards ;
+  -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
   height: 100%;
   border-radius: 50px;
   position: absolute;
   background-color: rgb(60, 0, 255);
   transition: 1s all;
 }
-.progress-line span .animate{
-  -webkit-animation: animate 1.5s 0.5s cubic-bezier(1,0,0.5,1) forwards;
-  animation: animate 1.5s 0.5s cubic-bezier(1,0,0.5,1) forwards;
+.progress-line span .animate {
+  -webkit-animation: animate 1.5s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animate 1.5s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
-.EvolHead
-{
-  
+.EvolHead {
   text-align: center;
   padding-bottom: 1rem;
   text-align: center;
- letter-spacing: 0.1rem;
- padding: 0.8rem;
- font-weight: bold;
- font-size: 1.3rem;
-
+  letter-spacing: 0.1rem;
+  padding: 0.8rem;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
-.generation{
+
+.generation {
   display: flex;
-  
 }
-.version{
-
+.version {
   display: flex;
   flex: wrap;
 }
-.pokemon{
+.pokemon {
   height: 11rem;
   width: 200px;
   margin-left: 2.5rem;
   margin-right: 2rem;
   border-radius: 29px;
 
-
-font-weight: bolder;
-font-size: 1.5rem;
+  font-weight: bolder;
+  font-size: 1.5rem;
   text-align: center;
   align-items: center;
   justify-content: center;
   box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  background-color:  rgba(30, 30, 30, 1);
-
+  background-color: rgba(30, 30, 30, 1);
 }
-.pokemon img{
+.pokemon img {
   margin: 0;
   padding: 0;
   height: 160px;
   width: 150px;
   /* object-fit: cover; */
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
-.search{
+.pokemon img:active {
+  transform: scale(0.95);
+}
+
+.pokemon img:hover {
+  transform: scale(1.05);
+}
+
+.search {
   /* border: 2px solid red; */
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; 
-  background-color: rgba(30, 30, 30, 1); 
+  z-index: 1000;
+  background-color: rgba(30, 30, 30, 1);
   padding-top: 25px;
   padding-bottom: 0px;
 }
-.search form{
+.search form {
   display: flex;
-  margin-left:6rem ;
-  
+  margin-left: 6rem;
 }
-form input{
+form input {
   width: 36%;
   height: 2.7rem;
   font-size: 1.3rem;
@@ -357,10 +339,16 @@ form input{
   padding-left: 2.7rem;
   color: rgb(55, 51, 51);
   font-weight: bolder;
-  background: linear-gradient(to bottom right , #59695c,#eefeed ,#d0ffcb , #8ca78c) ;
+  background: linear-gradient(
+    to bottom right,
+    #59695c,
+    #eefeed,
+    #d0ffcb,
+    #8ca78c
+  );
   border: 2px solid #678767;
 }
-form button{
+form button {
   font-size: 1.5rem;
   width: 9%;
   border-radius: 1.3rem;
@@ -368,6 +356,4 @@ form button{
   background-color: #b74555;
   color: white;
   border: 1px solid white;
-
 }
-
