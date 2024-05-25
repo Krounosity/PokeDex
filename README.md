@@ -57,7 +57,7 @@ The Pokedex Website is a comprehensive, interactive web application designed to 
 If you have any questions or feedback, please feel free to contact us:
 
 ### Email:
-  - Mohit Rudrakar
+  - [Mohit Rudrakar](mailto:rudrakarmp@rknec.edu@gmail.com?subject=Feedback%20on%20Pokedex%20Website&body=Hi%20there,%0D%0A%0D%0AI%20would%20like%20to%20provide%20the%20following%20feedback%20on%20the%20Pokedex%20Website:%0D%0A%0D%0A)
   - [Usha Sahu](mailto:ushasahu2010sahu@gmail.com?subject=Feedback%20on%20Pokedex%20Website&body=Hi%20there,%0D%0A%0D%0AI%20would%20like%20to%20provide%20the%20following%20feedback%20on%20the%20Pokedex%20Website:%0D%0A%0D%0A)
   - [Varnan Rathod](mailto:varnanrathod6@gmail.com?subject=Feedback%20on%20Pokedex%20Website&body=Hi%20there,%0D%0A%0D%0AI%20would%20like%20to%20provide%20the%20following%20feedback%20on%20the%20Pokedex%20Website:%0D%0A%0D%0A)
 
