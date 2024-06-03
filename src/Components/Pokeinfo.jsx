@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 
 const Pokeinfo = ({ data }) => {
-  let name;
+  const [currentPokemon, setCurrentPokemon] = useState(data);
   const [evolutionChain, setEvolutionChain] = useState([]);
   const [clicked, setClicked] = useState(false);
 
@@ -70,7 +70,16 @@ const Pokeinfo = ({ data }) => {
     fetchEvolutionChain();
   }, [data]);
 
-  if (!data) {
+  useEffect(() => {
+    setCurrentPokemon(data);
+  }, [data]);
+
+  const handleEvolutionClick = async (pokemonName) => {
+    const newPokemonData = await getPokemonData(pokemonName);
+    setCurrentPokemon(newPokemonData);
+  };
+
+  if (!currentPokemon) {
     return null;
   }
 
@@ -79,13 +88,17 @@ const Pokeinfo = ({ data }) => {
       onClick={() => setClicked(!clicked)}
       className={`pokeinfo-container ${clicked ? "clicked" : ""}`}
     >
-      {!data ? (
+      {!currentPokemon ? (
         ""
       ) : (
         <>
-          <h1>{data.name}</h1>
+          <h1>{currentPokemon.name}</h1>
           <div className="Info">
-            <img src={data.sprites.front_default} alt="" className="pokimg" />
+            <img
+              src={currentPokemon.sprites.front_default}
+              alt=""
+              className="pokimg"
+            />
             <div className="group-Info">
               <div className="sub-G">
                 <h2 className="head">Info</h2>
@@ -94,21 +107,21 @@ const Pokeinfo = ({ data }) => {
               <div className="sub-sub-G">
                 <div className="sub-G">
                   <h3>Weight</h3>
-                  <p className="infoValue">{data.weight / 10} kg</p>
+                  <p className="infoValue">{currentPokemon.weight / 10} kg</p>
                 </div>
                 <div className="sub-G">
                   <h3>Height</h3>
-                  <p className="infoValue">{data.base_experience / 100} m</p>
+                  <p className="infoValue">{currentPokemon.height / 10} m</p>
                 </div>
               </div>
               <div className="sub-sub-G">
                 <div className="sub-G">
                   <h3>Category</h3>
-                  <p className="infoValue">{data.height}</p>
+                  <p className="infoValue">{currentPokemon.height}</p>
                 </div>
                 <div className="sub-G">
                   <h3>Abilities</h3>
-                  {data.abilities.map((pokes, index) => {
+                  {currentPokemon.abilities.map((pokes, index) => {
                     return (
                       <p key={index} className="infoValue">
                         {pokes.ability.name},
@@ -125,8 +138,9 @@ const Pokeinfo = ({ data }) => {
             </div>
             <div className="ProgressBar">
               <div className="Basic-stats">
-                {data.stats.map((poke, index) => {
+                {currentPokemon.stats.map((poke, index) => {
                   const value = poke.base_stat;
+                  let name;
                   if (poke.stat.name === "attack") {
                     name = "ATTACK";
                   }
@@ -155,7 +169,9 @@ const Pokeinfo = ({ data }) => {
                         <p className="value">{value}</p>
                       </div>
                       <div className="progress-line" data-percent="90%">
-                        <span style={{ width: `${value}%` }}></span>
+                        <span
+                          style={{ width: `${(value / 225) * 90}%` }}
+                        ></span>
                       </div>
                     </div>
                   );
@@ -170,7 +186,11 @@ const Pokeinfo = ({ data }) => {
             <div className="version">
               <div className="generation">
                 {evolutionChain.map((pokemon, index) => (
-                  <div key={index} className="pokemon">
+                  <div
+                    key={index}
+                    className="pokemon"
+                    onClick={() => handleEvolutionClick(pokemon.name)}
+                  >
                     <p>{pokemon.name}</p>
                     <img src={pokemon.imageUrl} alt={pokemon.name} />
                   </div>
