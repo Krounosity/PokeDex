@@ -174,8 +174,6 @@ body {
   font-size: 1.3rem;
 }
 
-.sub-G {
-}
 .sub-G h3 {
   font-weight: bold;
   padding-bottom: 6px;
@@ -218,9 +216,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
 }
-.stats-info p {
-  /* border: 2px solid yellow; */
-}
+
 .stats-info .value {
   font-size: 1.2rem;
   font-weight: 600;
