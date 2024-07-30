@@ -37,6 +37,7 @@ body {
     #d0ffcb,
     #678767
   );
+
   border-radius: 1rem;
   box-shadow: 0 5px 5px rgba(255, 255, 255, 0.5);
   padding: 1 1.5rem;
@@ -44,6 +45,7 @@ body {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .num {
   position: relative;
@@ -130,6 +132,7 @@ body {
   background-color: #b74555;
   border-radius: 8px;
   margin: 5px;
+  cursor: pointer;
 }
 
 /* **************************** */
@@ -274,10 +277,11 @@ body {
   display: flex;
   width: 100%;
   height: 70%;
+  align-items: center;
+  justify-content: center;
 }
 .version {
   display: flex;
-  flex: wrap;
 }
 
 .pokeinfo-container {
@@ -331,6 +335,10 @@ body {
   background-color: rgba(30, 30, 30, 1);
   padding-top: 25px;
   padding-bottom: 0px;
+}
+
+.search button {
+  cursor: pointer;
 }
 .search form {
   display: flex;
