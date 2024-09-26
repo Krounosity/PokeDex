@@ -1,5 +1,5 @@
 # PokeDex
-The Pokedex Website is a comprehensive, interactive web application designed to provide detailed information about various Pokémon. It allows users to search and explore data on Pokémon, their stats, abilities, evolutions, and more.
+The Pokedex clone website is a comprehensive, interactive web application designed to provide detailed information about various Pokémon. It allows users to search and explore data on Pokémon, their stats, abilities, evolutions, and more.
 
 ## [Link to the website](https://tcpokedex.vercel.app/)
 
